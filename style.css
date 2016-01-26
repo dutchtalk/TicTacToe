@@ -1,0 +1,59 @@
+body
+{
+	text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+td
+{
+    /*border: 1px solid black;*/
+    border-collapse: collapse;
+}
+
+table
+{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+button
+{
+	background: orange;
+	border-radius: 5px;
+	display: inline-block;
+	font-family: 'Nunito', sans-serif;
+	text-decoration: none;
+	text-align: center;
+}
+
+/*Button's background etc.*/
+#Table button
+{
+	background: grey;
+	border-radius: 10px;
+	display: inline-block;
+	height: 22vw;
+	width: 22vw;
+	max-height: 200px;
+	max-width: 200px;
+	min-height: 65px;
+	min-width: 65px;
+    padding: 0px;
+}
+
+/* Button's text*/
+#Table button
+{
+	font-family: 'Nunito', sans-serif;
+	font-size: 75px;
+	text-decoration: none;
+	text-align: center;
+	line-height: 65px;
+}
+
+p
+{
+	font-family: 'Nunito', sans-serif;
+	font-size: 25px;
+}
