@@ -20,402 +20,62 @@ function ChangeValue(value)
 	//Makes sure you can't play/change buttons when the game is over
 	if(InProgress)
 	{
-	if(value == "1:1")
-	{
-		//Fill the ButtonChange variable with the applicable button
-		ButtonToChange = ButtonsArray[0];
-		//Fill ButtonValue with the value of the button
-		ButtonValue = document.getElementById(ButtonToChange).innerText;
-		//Check if ButtonValue is "-" (thus not a filled button yet)
-		if(ButtonValue == "-")
-		{
-			//If Turn equals true it's the X's turn
-			if(Turn)
-			{
-				//Change the button value to X
-				document.getElementById(ButtonToChange).innerText = "X";
-			}
-			//If Turn equals false it's the O's turn
-			else
-			{
-				//Change the button value to O
-				document.getElementById(ButtonToChange).innerText = "O";
-			}
-		}
-		else
-		{
-			//Do nothing
-			Turn = !Turn;
-		}
-	}
-	if(value == "1:2")
-	{
-		//Fill the ButtonChange variable with the applicable button
-		ButtonToChange = ButtonsArray[1];
-		//Fill ButtonValue with the value of the button
-		ButtonValue = document.getElementById(ButtonToChange).innerText;
+	ButtonToChange = value + "Button";
 
-		//Check if ButtonValue is "-" (thus not a filled button yet)
-		if(ButtonValue == "-")
-		{
-			//If Turn equals true it's the X's turn
-			if(Turn)
-			{
-				//Change the button value to X
-				document.getElementById(ButtonToChange).innerText = "X";
-			}
-			//If Turn equals false it's the O's turn
-			else
-			{
-				//Change the button value to O
-				document.getElementById(ButtonToChange).innerText = "O";
-			}
-		}
-		else
-		{
-			//Do nothing
-			Turn = !Turn;
-		}
-	}
-	if(value == "1:3")
+	//Fill ButtonValue with the value of the button so you can check it in the following if statement
+	ButtonValue = document.getElementById(ButtonToChange).innerText;
+	//Check if ButtonValue is "-" (thus not a filled button yet)
+	if(ButtonValue == "-")
 	{
-		//Fill the ButtonChange variable with the applicable button
-		ButtonToChange = ButtonsArray[2];
-		//Fill ButtonValue with the value of the button
-		ButtonValue = document.getElementById(ButtonToChange).innerText;
-
-		//Check if ButtonValue is "-" (thus not a filled button yet)
-		if(ButtonValue == "-")
+		//If Turn equals true it's the X's turn
+		if(Turn)
 		{
-			//If Turn equals true it's the X's turn
-			if(Turn)
-			{
-				//Change the button value to X
-				document.getElementById(ButtonToChange).innerText = "X";
-			}
-			//If Turn equals false it's the O's turn
-			else
-			{
-				//Change the button value to O
-				document.getElementById(ButtonToChange).innerText = "O";
-			}
+			//Change the button value to X
+			document.getElementById(ButtonToChange).innerText = "X";
 		}
+		//If Turn equals false it's the O's turn
 		else
 		{
-			//Do nothing
-			Turn = !Turn;
+			//Change the button value to O
+			document.getElementById(ButtonToChange).innerText = "O";
 		}
 	}
-	if(value == "2:1")
+	else
 	{
-		//Fill the ButtonChange variable with the applicable button
-		ButtonToChange = ButtonsArray[3];
-		//Fill ButtonValue with the value of the button
-		ButtonValue = document.getElementById(ButtonToChange).innerText;
-
-		//Check if ButtonValue is "-" (thus not a filled button yet)
-		if(ButtonValue == "-")
-		{
-			//If Turn equals true it's the X's turn
-			if(Turn)
-			{
-				//Change the button value to X
-				document.getElementById(ButtonToChange).innerText = "X";
-			}
-			//If Turn equals false it's the O's turn
-			else
-			{
-				//Change the button value to O
-				document.getElementById(ButtonToChange).innerText = "O";
-			}
-		}
-		else
-		{
-			//Do nothing
-			Turn = !Turn;
-		}
+		//Do nothing
+		Turn = !Turn;
 	}
-	if(value == "2:2")
-	{
-		//Fill the ButtonChange variable with the applicable button
-		ButtonToChange = ButtonsArray[4];
-		//Fill ButtonValue with the value of the button
-		ButtonValue = document.getElementById(ButtonToChange).innerText;
-
-		//Check if ButtonValue is "-" (thus not a filled button yet)
-		if(ButtonValue == "-")
-		{
-			//If Turn equals true it's the X's turn
-			if(Turn)
-			{
-				//Change the button value to X
-				document.getElementById(ButtonToChange).innerText = "X";
-			}
-			//If Turn equals false it's the O's turn
-			else
-			{
-				//Change the button value to O
-				document.getElementById(ButtonToChange).innerText = "O";
-			}
-		}
-		else
-		{
-			//Do nothing
-			Turn = !Turn;
-		}
-	}
-	if(value == "2:3")
-	{
-		//Fill the ButtonChange variable with the applicable button
-		ButtonToChange = ButtonsArray[5];
-		//Fill ButtonValue with the value of the button
-		ButtonValue = document.getElementById(ButtonToChange).innerText;
-
-		//Check if ButtonValue is "-" (thus not a filled button yet)
-		if(ButtonValue == "-")
-		{
-			//If Turn equals true it's the X's turn
-			if(Turn)
-			{
-				//Change the button value to X
-				document.getElementById(ButtonToChange).innerText = "X";
-			}
-			//If Turn equals false it's the O's turn
-			else
-			{
-				//Change the button value to O
-				document.getElementById(ButtonToChange).innerText = "O";
-			}
-		}
-		else
-		{
-			//Do nothing
-			Turn = !Turn;
-		}
-	}
-	if(value == "3:1")
-	{
-		//Fill the ButtonChange variable with the applicable button
-		ButtonToChange = ButtonsArray[6];
-		//Fill ButtonValue with the value of the button
-		ButtonValue = document.getElementById(ButtonToChange).innerText;
-
-		//Check if ButtonValue is "-" (thus not a filled button yet)
-		if(ButtonValue == "-")
-		{
-			//If Turn equals true it's the X's turn
-			if(Turn)
-			{
-				//Change the button value to X
-				document.getElementById(ButtonToChange).innerText = "X";
-			}
-			//If Turn equals false it's the O's turn
-			else
-			{
-				//Change the button value to O
-				document.getElementById(ButtonToChange).innerText = "O";
-			}
-		}
-		else
-		{
-			//Do nothing
-			Turn = !Turn;
-		}
-	}
-	if(value == "3:2")
-	{
-		//Fill the ButtonChange variable with the applicable button
-		ButtonToChange = ButtonsArray[7];
-		//Fill ButtonValue with the value of the button
-		ButtonValue = document.getElementById(ButtonToChange).innerText;
-
-		//Check if ButtonValue is "-" (thus not a filled button yet)
-		if(ButtonValue == "-")
-		{
-			//If Turn equals true it's the X's turn
-			if(Turn)
-			{
-				//Change the button value to X
-				document.getElementById(ButtonToChange).innerText = "X";
-			}
-			//If Turn equals false it's the O's turn
-			else
-			{
-				//Change the button value to O
-				document.getElementById(ButtonToChange).innerText = "O";
-			}
-		}
-		else
-		{
-			//Do nothing
-			Turn = !Turn;
-		}
-	}
-	if(value == "3:3")
-	{
-		//Fill the ButtonChange variable with the applicable button
-		ButtonToChange = ButtonsArray[8];
-		//Fill ButtonValue with the value of the button
-		ButtonValue = document.getElementById(ButtonToChange).innerText;
-
-		//Check if ButtonValue is "-" (thus not a filled button yet)
-		if(ButtonValue == "-")
-		{
-			//If Turn equals true it's the X's turn
-			if(Turn)
-			{
-				//Change the button value to X
-				document.getElementById(ButtonToChange).innerText = "X";
-			}
-			//If Turn equals false it's the O's turn
-			else
-			{
-				//Change the button value to O
-				document.getElementById(ButtonToChange).innerText = "O";
-			}
-		}
-		else
-		{
-			//Do nothing
-			Turn = !Turn;
-		}
-	}
+	CheckWinners();
 	}
 	Turn = !Turn;
-	CheckWinners();
 }
 
-//function at the end of every trigger of ChangeValue() to see if there is any winning combination
-function CheckWinners()
-{
-	//Check winners for O
-	//Horizontal
-	//First row, left to right
-	if((document.getElementById(ButtonsArray[0]).innerText == "O") &&
-	(document.getElementById(ButtonsArray[1]).innerText == "O") &&
-	(document.getElementById(ButtonsArray[2]).innerText == "O"))
-	{
-		Win('O');
-	}
-	//Second row, left to right
-	if((document.getElementById(ButtonsArray[3]).innerText == "O") &&
-	(document.getElementById(ButtonsArray[4]).innerText == "O") &&
-	(document.getElementById(ButtonsArray[5]).innerText == "O"))
-	{
-		Win('O');
-	}
-	//Third row, left to right
-	if((document.getElementById(ButtonsArray[6]).innerText == "O") &&
-	(document.getElementById(ButtonsArray[7]).innerText == "O") &&
-	(document.getElementById(ButtonsArray[8]).innerText == "O"))
-	{
-		Win('O');
-	}
+winningScenarios = [
+  ["1","2","3"], //left to right
+  ["4","5","6"],
+  ["7","8","9"],
+  ["1","4","7"], //top to bottom
+  ["2","5","8"],
+  ["3","6","9"],
+  ["1","5","9"], //diagonal
+  ["3","5","7"]
+];
 
-	//Vertical
-	//First column, up to down
-	if((document.getElementById(ButtonsArray[0]).innerText == "O") &&
-	(document.getElementById(ButtonsArray[3]).innerText == "O") &&
-	(document.getElementById(ButtonsArray[6]).innerText == "O"))
-	{
-		Win('O');
-	}
-	//Second column, up to down
-	if((document.getElementById(ButtonsArray[1]).innerText == "O") &&
-	(document.getElementById(ButtonsArray[4]).innerText == "O") &&
-	(document.getElementById(ButtonsArray[7]).innerText == "O"))
-	{
-		Win('O');
-	}
-	//Third column, up to down
-	if((document.getElementById(ButtonsArray[2]).innerText == "O") &&
-	(document.getElementById(ButtonsArray[5]).innerText == "O") &&
-	(document.getElementById(ButtonsArray[8]).innerText == "O"))
-	{
-		Win('O');
-	}
-
-	//Diagonal
-	//Left top to right bottom
-	if((document.getElementById(ButtonsArray[0]).innerText == "O") &&
-	(document.getElementById(ButtonsArray[4]).innerText == "O") &&
-	(document.getElementById(ButtonsArray[8]).innerText == "O"))
-	{
-		Win('O');
-	}
-	//Right top to left bottom
-	if((document.getElementById(ButtonsArray[2]).innerText == "O") &&
-	(document.getElementById(ButtonsArray[4]).innerText == "O") &&
-	(document.getElementById(ButtonsArray[6]).innerText == "O"))
-	{
-		Win('O');
-	}
-
-	//-------------------------------
-
-	//Check winners for X
-	//Horizontal
-	//First row, left to right
-	if((document.getElementById(ButtonsArray[0]).innerText == "X") &&
-	(document.getElementById(ButtonsArray[1]).innerText == "X") &&
-	(document.getElementById(ButtonsArray[2]).innerText == "X"))
-	{
-		Win('X');
-	}
-	//Second row, left to right
-	if((document.getElementById(ButtonsArray[3]).innerText == "X") &&
-	(document.getElementById(ButtonsArray[4]).innerText == "X") &&
-	(document.getElementById(ButtonsArray[5]).innerText == "X"))
-	{
-		Win('X');
-	}
-	//Third row, left to right
-	if((document.getElementById(ButtonsArray[6]).innerText == "X") &&
-	(document.getElementById(ButtonsArray[7]).innerText == "X") &&
-	(document.getElementById(ButtonsArray[8]).innerText == "X"))
-	{
-		Win('X');
-	}
-
-	//Vertical
-	//First column, up to down
-	if((document.getElementById(ButtonsArray[0]).innerText == "X") &&
-	(document.getElementById(ButtonsArray[3]).innerText == "X") &&
-	(document.getElementById(ButtonsArray[6]).innerText == "X"))
-	{
-		Win('X');
-	}
-	//Second column, up to down
-	if((document.getElementById(ButtonsArray[1]).innerText == "X") &&
-	(document.getElementById(ButtonsArray[4]).innerText == "X") &&
-	(document.getElementById(ButtonsArray[7]).innerText == "X"))
-	{
-		Win('X');
-	}
-	//Third column, up to down
-	if((document.getElementById(ButtonsArray[2]).innerText == "X") &&
-	(document.getElementById(ButtonsArray[5]).innerText == "X") &&
-	(document.getElementById(ButtonsArray[8]).innerText == "X"))
-	{
-		Win('X');
-	}
-
-	//Diagonal
-	//Left top to right bottom
-	if((document.getElementById(ButtonsArray[0]).innerText == "X") &&
-	(document.getElementById(ButtonsArray[4]).innerText == "X") &&
-	(document.getElementById(ButtonsArray[8]).innerText == "X"))
-	{
-		Win('X');
-	}
-	//Right top to left bottom
-	if((document.getElementById(ButtonsArray[2]).innerText == "X") &&
-	(document.getElementById(ButtonsArray[4]).innerText == "X") &&
-	(document.getElementById(ButtonsArray[6]).innerText == "X"))
-	{
-		Win('X');
-	}
+function innertext(id) {
+  return document.getElementById(id).innerText;
 }
+
+function CheckWinners() {
+  for (a = 0; a < winningscenarios.length; a++) {
+      if (innertext(ButtonsArray[winningScenarios[a][0]]) ==
+      innertext(ButtonsArray[winningScenarios[a][1]]) &&
+      innertext(ButtonsArray[winningScenarios[a][0]]) ==
+      innertext(ButtonsArray[winningScenarios[a][2]])) {
+        Win(innertext(ButtonsArray[winningScenarios[a][0]]))
+      }
+  }
+}
+
 
 //If there is someone with three the same symbols in a row (decided in CheckWinners())
 //this function will tell who is the winner
