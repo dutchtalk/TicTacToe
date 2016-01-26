@@ -9,19 +9,19 @@ winningScenarios = [
   ["3","6","9"],
   ["1","5","9"], //diagonal
   ["3","5","7"]
-]
+];
 
 function innertext(id) {
   return document.getElementById(id).innerText;
 }
 
 function CheckWinners() {
-  for (a = 1; a =< winningscenarios.length; a++) {
-      if (innertext(ButtonsArray[winningScenarios[a][1]]) ==
-      innertext(ButtonsArray[winningScenarios[a][2]]) &&
-      innertext(ButtonsArray[winningScenarios[a][1]]) ==
-      innertext(ButtonsArray[winningScenarios[a][3]])) {
-        Win(innertext(ButtonsArray[winningScenarios[a][1]]))
+  for (a = 0; a < winningscenarios.length; a++) {
+      if (innertext(ButtonsArray[winningScenarios[a][0]]) ==
+      innertext(ButtonsArray[winningScenarios[a][1]]) &&
+      innertext(ButtonsArray[winningScenarios[a][0]]) ==
+      innertext(ButtonsArray[winningScenarios[a][2]])) {
+        Win(innertext(ButtonsArray[winningScenarios[a][0]]))
       }
   }
 }
