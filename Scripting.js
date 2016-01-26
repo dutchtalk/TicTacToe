@@ -20,34 +20,34 @@ function ChangeValue(value)
 	//Makes sure you can't play/change buttons when the game is over
 	if(InProgress)
 	{
-	ButtonToChange = value + "Button";
-	
-	//Fill ButtonValue with the value of the button so you can check it in the following if statement
-	ButtonValue = document.getElementById(ButtonToChange).innerText;
-	//Check if ButtonValue is "-" (thus not a filled button yet)
-	if(ButtonValue == "-")
-	{
-		//If Turn equals true it's the X's turn
-		if(Turn)
+		ButtonToChange = value + "Button";
+		
+		//Fill ButtonValue with the value of the button so you can check it in the following if statement
+		ButtonValue = document.getElementById(ButtonToChange).innerText;
+		//Check if ButtonValue is "-" (thus not a filled button yet)
+		if(ButtonValue == "-")
 		{
-			//Change the button value to X
-			document.getElementById(ButtonToChange).innerText = "X";
+			//If Turn equals true it's the X's turn
+			if(Turn)
+			{
+				//Change the button value to X
+				document.getElementById(ButtonToChange).innerText = "X";
+			}
+			//If Turn equals false it's the O's turn
+			else
+			{
+				//Change the button value to O
+				document.getElementById(ButtonToChange).innerText = "O";
+			}
 		}
-		//If Turn equals false it's the O's turn
 		else
 		{
-			//Change the button value to O
-			document.getElementById(ButtonToChange).innerText = "O";
+			//Do nothing
+			Turn = !Turn;
 		}
-	}
-	else
-	{
-		//Do nothing
+		CheckWinners();
 		Turn = !Turn;
 	}
-	CheckWinners();
-	}
-	Turn = !Turn;
 }
 
 //function at the end of every trigger of ChangeValue() to see if there is any winning combination
