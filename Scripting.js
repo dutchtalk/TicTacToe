@@ -10,8 +10,8 @@ var ButtonValue;
 var InProgress = true;
 
 //Array with all button ID's
-var ButtonsArray = ["1.1Button", "1.2Button", "1.3Button", 
-					"2.1Button", "2.2Button", "2.3Button", 
+var ButtonsArray = ["1.1Button", "1.2Button", "1.3Button",
+					"2.1Button", "2.2Button", "2.3Button",
 					"3.1Button", "3.2Button", "3.3Button"];
 
 //Function that gets triggered on every button press. value being what button is pressed
@@ -54,7 +54,7 @@ function ChangeValue(value)
 		ButtonToChange = ButtonsArray[1];
 		//Fill ButtonValue with the value of the button
 		ButtonValue = document.getElementById(ButtonToChange).innerText;
-		
+
 		//Check if ButtonValue is "-" (thus not a filled button yet)
 		if(ButtonValue == "-")
 		{
@@ -83,7 +83,7 @@ function ChangeValue(value)
 		ButtonToChange = ButtonsArray[2];
 		//Fill ButtonValue with the value of the button
 		ButtonValue = document.getElementById(ButtonToChange).innerText;
-		
+
 		//Check if ButtonValue is "-" (thus not a filled button yet)
 		if(ButtonValue == "-")
 		{
@@ -112,7 +112,7 @@ function ChangeValue(value)
 		ButtonToChange = ButtonsArray[3];
 		//Fill ButtonValue with the value of the button
 		ButtonValue = document.getElementById(ButtonToChange).innerText;
-		
+
 		//Check if ButtonValue is "-" (thus not a filled button yet)
 		if(ButtonValue == "-")
 		{
@@ -141,7 +141,7 @@ function ChangeValue(value)
 		ButtonToChange = ButtonsArray[4];
 		//Fill ButtonValue with the value of the button
 		ButtonValue = document.getElementById(ButtonToChange).innerText;
-		
+
 		//Check if ButtonValue is "-" (thus not a filled button yet)
 		if(ButtonValue == "-")
 		{
@@ -170,7 +170,7 @@ function ChangeValue(value)
 		ButtonToChange = ButtonsArray[5];
 		//Fill ButtonValue with the value of the button
 		ButtonValue = document.getElementById(ButtonToChange).innerText;
-		
+
 		//Check if ButtonValue is "-" (thus not a filled button yet)
 		if(ButtonValue == "-")
 		{
@@ -199,7 +199,7 @@ function ChangeValue(value)
 		ButtonToChange = ButtonsArray[6];
 		//Fill ButtonValue with the value of the button
 		ButtonValue = document.getElementById(ButtonToChange).innerText;
-		
+
 		//Check if ButtonValue is "-" (thus not a filled button yet)
 		if(ButtonValue == "-")
 		{
@@ -228,7 +228,7 @@ function ChangeValue(value)
 		ButtonToChange = ButtonsArray[7];
 		//Fill ButtonValue with the value of the button
 		ButtonValue = document.getElementById(ButtonToChange).innerText;
-		
+
 		//Check if ButtonValue is "-" (thus not a filled button yet)
 		if(ButtonValue == "-")
 		{
@@ -257,7 +257,7 @@ function ChangeValue(value)
 		ButtonToChange = ButtonsArray[8];
 		//Fill ButtonValue with the value of the button
 		ButtonValue = document.getElementById(ButtonToChange).innerText;
-		
+
 		//Check if ButtonValue is "-" (thus not a filled button yet)
 		if(ButtonValue == "-")
 		{
@@ -288,129 +288,129 @@ function ChangeValue(value)
 //function at the end of every trigger of ChangeValue() to see if there is any winning combination
 function CheckWinners()
 {
-	//Check winners for O	
+	//Check winners for O
 	//Horizontal
 	//First row, left to right
-	if((document.getElementById(ButtonsArray[0]).innerText == "O") && 
-	(document.getElementById(ButtonsArray[1]).innerText == "O") && 
+	if((document.getElementById(ButtonsArray[0]).innerText == "O") &&
+	(document.getElementById(ButtonsArray[1]).innerText == "O") &&
 	(document.getElementById(ButtonsArray[2]).innerText == "O"))
 	{
 		Win('O');
 	}
 	//Second row, left to right
-	if((document.getElementById(ButtonsArray[3]).innerText == "O") && 
-	(document.getElementById(ButtonsArray[4]).innerText == "O") && 
+	if((document.getElementById(ButtonsArray[3]).innerText == "O") &&
+	(document.getElementById(ButtonsArray[4]).innerText == "O") &&
 	(document.getElementById(ButtonsArray[5]).innerText == "O"))
 	{
 		Win('O');
 	}
 	//Third row, left to right
-	if((document.getElementById(ButtonsArray[6]).innerText == "O") && 
-	(document.getElementById(ButtonsArray[7]).innerText == "O") && 
+	if((document.getElementById(ButtonsArray[6]).innerText == "O") &&
+	(document.getElementById(ButtonsArray[7]).innerText == "O") &&
 	(document.getElementById(ButtonsArray[8]).innerText == "O"))
 	{
 		Win('O');
 	}
-	
+
 	//Vertical
 	//First column, up to down
-	if((document.getElementById(ButtonsArray[0]).innerText == "O") && 
-	(document.getElementById(ButtonsArray[3]).innerText == "O") && 
+	if((document.getElementById(ButtonsArray[0]).innerText == "O") &&
+	(document.getElementById(ButtonsArray[3]).innerText == "O") &&
 	(document.getElementById(ButtonsArray[6]).innerText == "O"))
 	{
 		Win('O');
 	}
 	//Second column, up to down
-	if((document.getElementById(ButtonsArray[1]).innerText == "O") && 
-	(document.getElementById(ButtonsArray[4]).innerText == "O") && 
+	if((document.getElementById(ButtonsArray[1]).innerText == "O") &&
+	(document.getElementById(ButtonsArray[4]).innerText == "O") &&
 	(document.getElementById(ButtonsArray[7]).innerText == "O"))
 	{
 		Win('O');
 	}
 	//Third column, up to down
-	if((document.getElementById(ButtonsArray[2]).innerText == "O") && 
-	(document.getElementById(ButtonsArray[5]).innerText == "O") && 
+	if((document.getElementById(ButtonsArray[2]).innerText == "O") &&
+	(document.getElementById(ButtonsArray[5]).innerText == "O") &&
 	(document.getElementById(ButtonsArray[8]).innerText == "O"))
 	{
 		Win('O');
 	}
-	
+
 	//Diagonal
 	//Left top to right bottom
-	if((document.getElementById(ButtonsArray[0]).innerText == "O") && 
-	(document.getElementById(ButtonsArray[4]).innerText == "O") && 
+	if((document.getElementById(ButtonsArray[0]).innerText == "O") &&
+	(document.getElementById(ButtonsArray[4]).innerText == "O") &&
 	(document.getElementById(ButtonsArray[8]).innerText == "O"))
 	{
 		Win('O');
 	}
 	//Right top to left bottom
-	if((document.getElementById(ButtonsArray[2]).innerText == "O") && 
-	(document.getElementById(ButtonsArray[4]).innerText == "O") && 
+	if((document.getElementById(ButtonsArray[2]).innerText == "O") &&
+	(document.getElementById(ButtonsArray[4]).innerText == "O") &&
 	(document.getElementById(ButtonsArray[6]).innerText == "O"))
 	{
 		Win('O');
 	}
-	
+
 	//-------------------------------
-	
-	//Check winners for X	
+
+	//Check winners for X
 	//Horizontal
 	//First row, left to right
-	if((document.getElementById(ButtonsArray[0]).innerText == "X") && 
-	(document.getElementById(ButtonsArray[1]).innerText == "X") && 
+	if((document.getElementById(ButtonsArray[0]).innerText == "X") &&
+	(document.getElementById(ButtonsArray[1]).innerText == "X") &&
 	(document.getElementById(ButtonsArray[2]).innerText == "X"))
 	{
 		Win('X');
 	}
 	//Second row, left to right
-	if((document.getElementById(ButtonsArray[3]).innerText == "X") && 
-	(document.getElementById(ButtonsArray[4]).innerText == "X") && 
+	if((document.getElementById(ButtonsArray[3]).innerText == "X") &&
+	(document.getElementById(ButtonsArray[4]).innerText == "X") &&
 	(document.getElementById(ButtonsArray[5]).innerText == "X"))
 	{
 		Win('X');
 	}
 	//Third row, left to right
-	if((document.getElementById(ButtonsArray[6]).innerText == "X") && 
-	(document.getElementById(ButtonsArray[7]).innerText == "X") && 
+	if((document.getElementById(ButtonsArray[6]).innerText == "X") &&
+	(document.getElementById(ButtonsArray[7]).innerText == "X") &&
 	(document.getElementById(ButtonsArray[8]).innerText == "X"))
 	{
 		Win('X');
 	}
-	
+
 	//Vertical
 	//First column, up to down
-	if((document.getElementById(ButtonsArray[0]).innerText == "X") && 
-	(document.getElementById(ButtonsArray[3]).innerText == "X") && 
+	if((document.getElementById(ButtonsArray[0]).innerText == "X") &&
+	(document.getElementById(ButtonsArray[3]).innerText == "X") &&
 	(document.getElementById(ButtonsArray[6]).innerText == "X"))
 	{
 		Win('X');
 	}
 	//Second column, up to down
-	if((document.getElementById(ButtonsArray[1]).innerText == "X") && 
-	(document.getElementById(ButtonsArray[4]).innerText == "X") && 
+	if((document.getElementById(ButtonsArray[1]).innerText == "X") &&
+	(document.getElementById(ButtonsArray[4]).innerText == "X") &&
 	(document.getElementById(ButtonsArray[7]).innerText == "X"))
 	{
 		Win('X');
 	}
 	//Third column, up to down
-	if((document.getElementById(ButtonsArray[2]).innerText == "X") && 
-	(document.getElementById(ButtonsArray[5]).innerText == "X") && 
+	if((document.getElementById(ButtonsArray[2]).innerText == "X") &&
+	(document.getElementById(ButtonsArray[5]).innerText == "X") &&
 	(document.getElementById(ButtonsArray[8]).innerText == "X"))
 	{
 		Win('X');
 	}
-	
+
 	//Diagonal
 	//Left top to right bottom
-	if((document.getElementById(ButtonsArray[0]).innerText == "X") && 
-	(document.getElementById(ButtonsArray[4]).innerText == "X") && 
+	if((document.getElementById(ButtonsArray[0]).innerText == "X") &&
+	(document.getElementById(ButtonsArray[4]).innerText == "X") &&
 	(document.getElementById(ButtonsArray[8]).innerText == "X"))
 	{
 		Win('X');
 	}
 	//Right top to left bottom
-	if((document.getElementById(ButtonsArray[2]).innerText == "X") && 
-	(document.getElementById(ButtonsArray[4]).innerText == "X") && 
+	if((document.getElementById(ButtonsArray[2]).innerText == "X") &&
+	(document.getElementById(ButtonsArray[4]).innerText == "X") &&
 	(document.getElementById(ButtonsArray[6]).innerText == "X"))
 	{
 		Win('X');
@@ -432,8 +432,8 @@ function Win(Winning)
 function Reset()
 {
 	//Loop that makes all the buttons reset
-	for (i = 0; i < ButtonsArray.length; i++) 
-	{ 
+	for (i = 0; i < ButtonsArray.length; i++)
+	{
 		document.getElementById(ButtonsArray[i]).innerText = "-";
 	}
 	//Change the text that shows who won to nothing, so it gets removed.
