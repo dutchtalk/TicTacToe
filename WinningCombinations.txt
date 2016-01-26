@@ -1,0 +1,33 @@
+1:1, 1:2, 1:3
+2:1, 2:2, 2:3
+3:1, 3:2, 3:3
+
+1:1, 2:1, 3:1
+1:2, 2:2, 3:3
+1:3, 2:3, 3:3
+
+1:1, 2:2, 3:3
+1:3, 2:2, 3:1
+-------------
+ButtonsArray[0], ButtonsArray[1], ButtonsArray[2]
+ButtonsArray[3], ButtonsArray[4], ButtonsArray[5]
+ButtonsArray[6], ButtonsArray[7], ButtonsArray[8]
+
+ButtonsArray[0], ButtonsArray[3], ButtonsArray[6]
+ButtonsArray[1], ButtonsArray[4], ButtonsArray[7]
+ButtonsArray[2], ButtonsArray[5], ButtonsArray[8]
+
+ButtonsArray[0], ButtonsArray[4], ButtonsArray[8]
+ButtonsArray[2], ButtonsArray[4], ButtonsArray[6]
+
+1:1 = 0
+1:2 = 1
+1:3 = 2
+
+2:1 = 3
+2:2 = 4
+2:3 = 5
+
+3:1 = 6
+3:2 = 7
+3:3 = 8
