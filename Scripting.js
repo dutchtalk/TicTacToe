@@ -1,4 +1,4 @@
-//Javascript for main.html
+//Javascript for index.html
 //If 'Turn' equal true, an X will be placed. Otherwise an O will be placed
 var Turn = true;
 
