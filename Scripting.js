@@ -13,276 +13,41 @@ var InProgress = true;
 var ButtonsArray = ["1.1Button", "1.2Button", "1.3Button", 
 					"2.1Button", "2.2Button", "2.3Button", 
 					"3.1Button", "3.2Button", "3.3Button"];
-
+					
 //Function that gets triggered on every button press. value being what button is pressed
 function ChangeValue(value)
 {
 	//Makes sure you can't play/change buttons when the game is over
 	if(InProgress)
 	{
-	if(value == "1:1")
+	ButtonToChange = value + "Button";
+	
+	//Fill ButtonValue with the value of the button so you can check it in the following if statement
+	ButtonValue = document.getElementById(ButtonToChange).innerText;
+	//Check if ButtonValue is "-" (thus not a filled button yet)
+	if(ButtonValue == "-")
 	{
-		//Fill the ButtonChange variable with the applicable button
-		ButtonToChange = ButtonsArray[0];
-		//Fill ButtonValue with the value of the button
-		ButtonValue = document.getElementById(ButtonToChange).innerText;
-		//Check if ButtonValue is "-" (thus not a filled button yet)
-		if(ButtonValue == "-")
+		//If Turn equals true it's the X's turn
+		if(Turn)
 		{
-			//If Turn equals true it's the X's turn
-			if(Turn)
-			{
-				//Change the button value to X
-				document.getElementById(ButtonToChange).innerText = "X";
-			}
-			//If Turn equals false it's the O's turn
-			else
-			{
-				//Change the button value to O
-				document.getElementById(ButtonToChange).innerText = "O";
-			}
+			//Change the button value to X
+			document.getElementById(ButtonToChange).innerText = "X";
 		}
+		//If Turn equals false it's the O's turn
 		else
 		{
-			//Do nothing
-			Turn = !Turn;
+			//Change the button value to O
+			document.getElementById(ButtonToChange).innerText = "O";
 		}
 	}
-	if(value == "1:2")
+	else
 	{
-		//Fill the ButtonChange variable with the applicable button
-		ButtonToChange = ButtonsArray[1];
-		//Fill ButtonValue with the value of the button
-		ButtonValue = document.getElementById(ButtonToChange).innerText;
-		
-		//Check if ButtonValue is "-" (thus not a filled button yet)
-		if(ButtonValue == "-")
-		{
-			//If Turn equals true it's the X's turn
-			if(Turn)
-			{
-				//Change the button value to X
-				document.getElementById(ButtonToChange).innerText = "X";
-			}
-			//If Turn equals false it's the O's turn
-			else
-			{
-				//Change the button value to O
-				document.getElementById(ButtonToChange).innerText = "O";
-			}
-		}
-		else
-		{
-			//Do nothing
-			Turn = !Turn;
-		}
+		//Do nothing
+		Turn = !Turn;
 	}
-	if(value == "1:3")
-	{
-		//Fill the ButtonChange variable with the applicable button
-		ButtonToChange = ButtonsArray[2];
-		//Fill ButtonValue with the value of the button
-		ButtonValue = document.getElementById(ButtonToChange).innerText;
-		
-		//Check if ButtonValue is "-" (thus not a filled button yet)
-		if(ButtonValue == "-")
-		{
-			//If Turn equals true it's the X's turn
-			if(Turn)
-			{
-				//Change the button value to X
-				document.getElementById(ButtonToChange).innerText = "X";
-			}
-			//If Turn equals false it's the O's turn
-			else
-			{
-				//Change the button value to O
-				document.getElementById(ButtonToChange).innerText = "O";
-			}
-		}
-		else
-		{
-			//Do nothing
-			Turn = !Turn;
-		}
-	}
-	if(value == "2:1")
-	{
-		//Fill the ButtonChange variable with the applicable button
-		ButtonToChange = ButtonsArray[3];
-		//Fill ButtonValue with the value of the button
-		ButtonValue = document.getElementById(ButtonToChange).innerText;
-		
-		//Check if ButtonValue is "-" (thus not a filled button yet)
-		if(ButtonValue == "-")
-		{
-			//If Turn equals true it's the X's turn
-			if(Turn)
-			{
-				//Change the button value to X
-				document.getElementById(ButtonToChange).innerText = "X";
-			}
-			//If Turn equals false it's the O's turn
-			else
-			{
-				//Change the button value to O
-				document.getElementById(ButtonToChange).innerText = "O";
-			}
-		}
-		else
-		{
-			//Do nothing
-			Turn = !Turn;
-		}
-	}
-	if(value == "2:2")
-	{
-		//Fill the ButtonChange variable with the applicable button
-		ButtonToChange = ButtonsArray[4];
-		//Fill ButtonValue with the value of the button
-		ButtonValue = document.getElementById(ButtonToChange).innerText;
-		
-		//Check if ButtonValue is "-" (thus not a filled button yet)
-		if(ButtonValue == "-")
-		{
-			//If Turn equals true it's the X's turn
-			if(Turn)
-			{
-				//Change the button value to X
-				document.getElementById(ButtonToChange).innerText = "X";
-			}
-			//If Turn equals false it's the O's turn
-			else
-			{
-				//Change the button value to O
-				document.getElementById(ButtonToChange).innerText = "O";
-			}
-		}
-		else
-		{
-			//Do nothing
-			Turn = !Turn;
-		}
-	}
-	if(value == "2:3")
-	{
-		//Fill the ButtonChange variable with the applicable button
-		ButtonToChange = ButtonsArray[5];
-		//Fill ButtonValue with the value of the button
-		ButtonValue = document.getElementById(ButtonToChange).innerText;
-		
-		//Check if ButtonValue is "-" (thus not a filled button yet)
-		if(ButtonValue == "-")
-		{
-			//If Turn equals true it's the X's turn
-			if(Turn)
-			{
-				//Change the button value to X
-				document.getElementById(ButtonToChange).innerText = "X";
-			}
-			//If Turn equals false it's the O's turn
-			else
-			{
-				//Change the button value to O
-				document.getElementById(ButtonToChange).innerText = "O";
-			}
-		}
-		else
-		{
-			//Do nothing
-			Turn = !Turn;
-		}
-	}
-	if(value == "3:1")
-	{
-		//Fill the ButtonChange variable with the applicable button
-		ButtonToChange = ButtonsArray[6];
-		//Fill ButtonValue with the value of the button
-		ButtonValue = document.getElementById(ButtonToChange).innerText;
-		
-		//Check if ButtonValue is "-" (thus not a filled button yet)
-		if(ButtonValue == "-")
-		{
-			//If Turn equals true it's the X's turn
-			if(Turn)
-			{
-				//Change the button value to X
-				document.getElementById(ButtonToChange).innerText = "X";
-			}
-			//If Turn equals false it's the O's turn
-			else
-			{
-				//Change the button value to O
-				document.getElementById(ButtonToChange).innerText = "O";
-			}
-		}
-		else
-		{
-			//Do nothing
-			Turn = !Turn;
-		}
-	}
-	if(value == "3:2")
-	{
-		//Fill the ButtonChange variable with the applicable button
-		ButtonToChange = ButtonsArray[7];
-		//Fill ButtonValue with the value of the button
-		ButtonValue = document.getElementById(ButtonToChange).innerText;
-		
-		//Check if ButtonValue is "-" (thus not a filled button yet)
-		if(ButtonValue == "-")
-		{
-			//If Turn equals true it's the X's turn
-			if(Turn)
-			{
-				//Change the button value to X
-				document.getElementById(ButtonToChange).innerText = "X";
-			}
-			//If Turn equals false it's the O's turn
-			else
-			{
-				//Change the button value to O
-				document.getElementById(ButtonToChange).innerText = "O";
-			}
-		}
-		else
-		{
-			//Do nothing
-			Turn = !Turn;
-		}
-	}
-	if(value == "3:3")
-	{
-		//Fill the ButtonChange variable with the applicable button
-		ButtonToChange = ButtonsArray[8];
-		//Fill ButtonValue with the value of the button
-		ButtonValue = document.getElementById(ButtonToChange).innerText;
-		
-		//Check if ButtonValue is "-" (thus not a filled button yet)
-		if(ButtonValue == "-")
-		{
-			//If Turn equals true it's the X's turn
-			if(Turn)
-			{
-				//Change the button value to X
-				document.getElementById(ButtonToChange).innerText = "X";
-			}
-			//If Turn equals false it's the O's turn
-			else
-			{
-				//Change the button value to O
-				document.getElementById(ButtonToChange).innerText = "O";
-			}
-		}
-		else
-		{
-			//Do nothing
-			Turn = !Turn;
-		}
-	}
+	CheckWinners();
 	}
 	Turn = !Turn;
-	CheckWinners();
 }
 
 //function at the end of every trigger of ChangeValue() to see if there is any winning combination
