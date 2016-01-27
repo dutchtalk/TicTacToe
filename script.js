@@ -14,8 +14,7 @@ var InProgress = true;
 
 //Function that gets triggered on every button press. value being what button is pressed
 console.log('Creating ChangeValue()')
-function ChangeValue(value)
-{
+function ChangeValue(value) {
 	console.log('ChangeValue() created')
 	//Makes sure you can't play/change buttons when the game is over
 	if(InProgress)
@@ -49,7 +48,7 @@ function ChangeValue(value)
 	}
 	Turn = !Turn;
 };
-
+console.log('done creating ChangeValue()')
 winningScenarios = [
   ["1","2","3"], //left to right
   ["4","5","6"],
