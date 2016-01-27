@@ -1,5 +1,10 @@
 'use strict';
-if (!typeof $ == "function") {function $() {alert('jQuery is not loaded!');}
+//the three lines below are making JSLint happy :)
+if (!typeof $ == "function") {
+  function $() {
+    alert('jQuery is not loaded!');
+  }
+}
 $(document).ready(function(){
 console.log('document loaded');
 //Javascript for index.html
