@@ -12,11 +12,6 @@ var ButtonValue;
 //Boolean which makes sure after the game is over, you can't still play.
 var InProgress = true;
 
-//Array with all button ID's
-var ButtonsArray = ["1.1Button", "1.2Button", "1.3Button",
-					"2.1Button", "2.2Button", "2.3Button",
-					"3.1Button", "3.2Button", "3.3Button"];
-
 //Function that gets triggered on every button press. value being what button is pressed
 console.log('Creating ChangeValue()')
 function ChangeValue(value)
@@ -53,7 +48,7 @@ function ChangeValue(value)
 	CheckWinners();
 	}
 	Turn = !Turn;
-}
+};
 
 winningScenarios = [
   ["1","2","3"], //left to right
@@ -79,7 +74,7 @@ function CheckWinners() {
         Win(innertext(ButtonsArray[winningScenarios[a][0]]))
       }
   }
-}
+};
 
 
 //If there is someone with three the same symbols in a row (decided in CheckWinners())
@@ -90,7 +85,7 @@ function Win(Winning)
 	InProgress = false;
 	//Tells who is the winner (Winning being the value that gets passed to the function 'Win').
 	document.getElementById("WinnerText").innerText = Winning + " Has won!";
-}
+};
 
 //Function for the button to reset the game.
 //Turns all button to their default ("-") and also makes it so you can play again
