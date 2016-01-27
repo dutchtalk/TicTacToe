@@ -21,7 +21,6 @@ function ChangeValue(value)
 	if(InProgress)
 	{
 		ButtonToChange = value + "Button";
-		
 		//Fill ButtonValue with the value of the button so you can check it in the following if statement
 		ButtonValue = document.getElementById(ButtonToChange).innerText;
 		//Check if ButtonValue is "-" (thus not a filled button yet)
@@ -47,6 +46,10 @@ function ChangeValue(value)
 		}
 		CheckWinners();
 		Turn = !Turn;
+	}
+	else
+	{
+		//Game not in progress, values of the buttons wont be changed
 	}
 }
 
@@ -203,5 +206,6 @@ function Reset()
 	}
 	//Change the text that shows who won to nothing, so it gets removed.
 	document.getElementById("WinnerText").innerText = "";
+	Turn = true;
 	InProgress = true;
 }
