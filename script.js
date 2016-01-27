@@ -101,4 +101,4 @@ function Reset()
 	document.getElementById("WinnerText").innerText = "";
 	InProgress = true;
 }
-)};
+});
