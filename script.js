@@ -1,3 +1,4 @@
+$(document).ready(function(){
 //Javascript for index.html
 //If 'Turn' equal true, an X will be placed. Otherwise an O will be placed
 var Turn = true;
@@ -100,3 +101,4 @@ function Reset()
 	document.getElementById("WinnerText").innerText = "";
 	InProgress = true;
 }
+)};
