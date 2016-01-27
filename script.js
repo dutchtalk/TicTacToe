@@ -1,4 +1,6 @@
+console.log('script.js called')
 $(document).ready(function(){
+console.log('document loaded')
 //Javascript for index.html
 //If 'Turn' equal true, an X will be placed. Otherwise an O will be placed
 var Turn = true;
