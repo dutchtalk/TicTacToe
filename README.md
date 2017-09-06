@@ -1,4 +1,4 @@
 # TicTacToe
 
 TicTacToe by minibois and mikat :)
-banaantjes zijn lekker x epickneusje :)
+epickneusje heeft niks gedaan maar ik sta wel bij het namenlijstje
